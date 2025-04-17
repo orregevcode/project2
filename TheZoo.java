@@ -33,15 +33,40 @@ public class TheZoo {
         System.out.println("The heaviest animal is " + heaviest.getType() + "  Name: " + heaviest.getName()
                 + ", Weight: " + heaviest.getWeight() + ", Gender: "
                 + (heaviest.getGender() == Animal.MALE ? "Male" : "Female"));
- 
-        // Creating an array of Elephant objects specifically (only Elephant objects allowed)
-        Elephant[] zooElephants = new Elephant[5];
-        zooElephants[0] = new Elephant("E1", 6000, 0, 12, 2.0);
-        zooElephants[1] = new Elephant("E2", 5500, 1, 11, 1.8);
-        zooElephants[2] = new Elephant("E3", 6200, 0, 13, 2.1);
-        zooElephants[3] = new Elephant("E4", 5800, 1, 10, 1.9);
-        zooElephants[4] = new Elephant("E5", 5900, 0, 12, 2.2);
 
+        // Creating an array of Elephant objects specifically (only Elephant objects
+        // allowed)
+        Elephant[] zooElephants = new Elephant[5];
+        zooElephants[0] = new Elephant("e1", 6000, 0, 12, 2.0);
+        zooElephants[1] = new Elephant("e2", 5500, 1, 11, 1.8);
+        zooElephants[2] = new Elephant("e3", 6200, 0, 13, 2.1);
+        zooElephants[3] = new Elephant("e4", 5800, 1, 10, 1.9);
+        zooElephants[4] = new Elephant("e5", 5900, 0, 12, 2.2);
+
+        // copy of zooElephants array
+        Elephant[] HooElephants = new Elephant[zooElephants.length];
+
+        for (int i = 0; i < zooElephants.length; i++) {
+            HooElephants[i] = new Elephant(zooElephants[i]);// call the copy constrctor of the Elephant class
+
+        }
+        for (Elephant elephant : HooElephants) {
+            elephant.setName("H" + elephant.getName());
+        }
+
+        // Print the first array zooElephants (Loop #3)
+        System.out.println("\n--- Loop #3: Original zooElephants ---");
+
+        for (Elephant elephant : zooElephants) {
+            System.out.println(elephant);
+        }
+
+        // Print the second array hooElephants (Loop #4)
+        System.out.println("\n--- Loop #4: Modified HooElephants ---");
+
+        for (Elephant elephant : HooElephants) {
+            System.out.println(elephant);
+        }
 
     }
 
