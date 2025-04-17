@@ -7,8 +7,14 @@ public class Gazelle extends Walker {
         System.out.println("Lailatilati");
     }
 
+    
     public Gazelle(Gazelle other ){
         super(other);
+    }
+
+    @Override
+    public String getType() {
+        return "Gazelle"; 
     }
 
 

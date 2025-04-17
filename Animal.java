@@ -14,14 +14,14 @@ abstract class Animal {
      */
 
     // ==================================
-    //  Abstract Class Animal 
+    // Abstract Class Animal
     // ==================================
     protected String _name;
     protected double _weight;
     protected int _gender;
 
-    public static final int MALE = 0;
-    public static final int FEMALE = 1;
+    protected static final int MALE = 0;
+    protected static final int FEMALE = 1;
 
     /**
      * Represents a general animal in the zoo.
@@ -91,13 +91,13 @@ abstract class Animal {
         this._gender = (gender == MALE || gender == FEMALE) ? gender : MALE;
     }
 
-
     // ==================================
     // Overridden Methods
     // ==================================
 
     /**
-     * Determines if two animals are equal by comparing their name, weight, and gender.
+     * Determines if two animals are equal by comparing their name, weight, and
+     * gender.
      * 
      * @param obj The object to compare to this animal.
      * @return true if the animals are equal, false otherwise.
@@ -105,7 +105,7 @@ abstract class Animal {
     @Override
     public boolean equals(Object obj) {
 
-     // Check if both references point to the same object in memory
+        // Check if both references point to the same object in memory
         if (this == obj)
             return true;
         if (!(obj instanceof Animal))
@@ -120,7 +120,7 @@ abstract class Animal {
     }
 
     // ==================================
-    // Abstract Methods (will  be implemented by subclasses)
+    // Abstract Methods (will be implemented by subclasses)
     // ==================================
     /**
      * Handles the animal leaving its cage for feeding.
@@ -150,6 +150,13 @@ abstract class Animal {
         System.out.println(" getting back ");
     }
 
+    /**
+     * Returns the type of the animal.
+     * This abstract method must be implemented by all subclasses of Animal    
+   
+     */
+
+     public abstract String getType();
 
 
 }

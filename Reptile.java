@@ -1,5 +1,6 @@
 // ==================================
 // Abstract Class Reptile
+// it is super calss for Snake and Crocodile
 // ==================================
 abstract class Reptile extends Animal {
     private double _length; // the length of the Animal
@@ -64,7 +65,7 @@ abstract class Reptile extends Animal {
      
         Reptile other = (Reptile)obj; // Cast to Reptile
 
-        return Double.compare(this._length, other._length) == 0; // Compare _length field
+        return Double.compare(this._length, other._length) == 0; 
 
      
 

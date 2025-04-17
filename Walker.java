@@ -84,7 +84,7 @@ abstract class Walker extends Animal {
 
     @Override
     public String toString() {
-        return "Animal [name=" + _name + ", weight=" + _weight + ", gender=" + (_gender == MALE ? "Male" : "Female")
+        return "Walker [name=" + _name + ", weight=" + _weight + ", gender=" + (_gender == MALE ? "Male" : "Female")
                 + "]";
     }
 
@@ -98,5 +98,7 @@ abstract class Walker extends Animal {
 
         return this._speed == other._speed && this._tailLength == other._tailLength;
     }
+
+    //Note   because Walker is abstract class we not use 
 
 }

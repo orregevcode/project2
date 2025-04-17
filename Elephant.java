@@ -32,6 +32,11 @@ public class Elephant extends Walker {
        
     }
 
+    @Override
+    public String getType() {
+        return "Elephant"; 
+    }
+
 
 
 }
